@@ -24,33 +24,19 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.3/dist/iconify-icon.min.js"></script>
 
-    <!-- Remove this and fill in your name & photo in the required areas -->
-    <script>
-      fetch('https://randomuser.me/api/?inc=name,picture')
-        .then((response) => response.json())
-        .then(({ results }) => results[0])
-        .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
-          document.querySelector(
-            '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
-        })
-    </script>
-
+   
     <link href="styles/theme.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
 
     <!-- Set Page Title Here -->
-    <title></title>
+    <title>Portfolio</title>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg bg-primary fixed-top">
       <div class="container-fluid p-2 px-lg-2 py-lg-0">
         <!-- Set Name Here -->
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="#">Choiyons Portfolio</a>
         <button
           class="navbar-toggler bg-white"
           type="button"
@@ -66,6 +52,9 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#projects"
@@ -95,6 +84,7 @@
       >
       <!-- Set Photo Here -->
         <img
+         src="images/profile.jpg"
           style="height: 150px; width: 150px"
           class="rounded-circle"
           draggable="false"
@@ -104,8 +94,7 @@
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
           <!-- Set Name Here -->
-          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm
-          <span id="name"></span>!
+          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm Choiyon Chakraborty
         </h4>
       </div>
       <div class="row mx-auto">
@@ -122,14 +111,7 @@
             title="Python"
           />
         </div>
-        <div class="col text-center">
-          <img
-            src="images/angular.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Angular"
-          />
-        </div>
+
         <div class="col text-center">
           <img
             src="images/typescript.jpg"
@@ -172,22 +154,6 @@
             title="ASP.NET"
           />
         </div>
-        <div class="col text-center">
-          <img
-            src="images/mssql.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Microsoft SQL Server"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/mongodb.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="MongoDB"
-          />
-        </div>
       </div>
 
       <div class="row mt-3 mt-lg-5 next">
@@ -199,60 +165,52 @@
         ></a>
       </div>
     </div>
-    <div
-      class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
-      id="projects"
-    >
-      <div class="row mx-auto">
-        <h4 class="h1 font-weight-bold mx-auto text-center">Projects</h4>
+    <div class="container section min-vh-100 d-flex flex-column justify-content-center" id="about">
+      <div class="row mx-auto mb-5">
+        <h1>Who Am I?</h1>
       </div>
-      <div class="row mx-auto">
-        <h5 class="h5 mx-auto text-opacity-75 text-primary text-center mb-4">
-          I've worked on some neat things.
-        </h5>
+      
+      <div>
+        <div class="col-lg-4">
+          <div class="card shadow-lg border-primary">
+            <div class="card-body text-center">
+              <img src="images/profile.jpg" class="rounded-circle mb-3" style="width: 200px; height: 200px" alt="Profile">
+              <h3 class="card-title">Choiyon Chakraborty</h3>
+              <p class="text-muted">IST Student</p>
+              <div>
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-primary">UX Research</span>
+                <span class="badge bg-primary">Cybersecurity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="container section min-vh-100 d-flex flex-column justify-content-center" id="projects">
+      <h1 class="display-4 text-center mb-5">Projects</h1>
+      
+      <div class="card shadow mb-4">
+        <div class="card-body">
+          <h3 class="card-title">AI Morality Research Project</h3>
+          <p class="card-text">
+            - Conducted research on ethical implications of AI decision-making<br>
+            - Investigated ethical frameworks and AI algorithm biases<br>
+            - Presented policy recommendations for ethical AI development
+          </p>
+        </div>
       </div>
-      <div class="row w-100">
-        <h5>Inspiro for Esperanza</h5>
+
+      <div class="card shadow">
+        <div class="card-body">
+          <h3 class="card-title">Zara UX Research</h3>
+          <p class="card-text">
+            - Conducted usability studies with real users<br>
+            - Created empathy maps for user behavior analysis<br>
+            - Informed design decisions based on user pain points
+          </p>
+        </div>
       </div>
-      <div class="row w-100 mb-4">
-        <p class="text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus
-          nisi in neque blandit auctor. Vestibulum pellentesque fringilla nulla
-          quis sagittis. Donec id erat sodales, fringilla est non, vestibulum
-          tellus. Suspendisse potenti. Fusce et dolor blandit, tincidunt eros
-          non, pharetra orci. Donec massa neque, suscipit at purus ac, cursus
-          tincidunt purus. Suspendisse imperdiet massa nec sem dictum luctus.
-          Vestibulum at porta lectus, sed faucibus libero.
-        </p>
-      </div>
-      <div class="row w-100">
-        <h5>Work From Home Pinterest</h5>
-      </div>
-      <div class="row w-100 mb-4">
-        <p class="text-justify">
-          Vestibulum vulputate ullamcorper placerat. Fusce bibendum ligula non
-          ex dapibus finibus. Nulla facilisi. Integer eu libero lorem.
-          Pellentesque eget pretium ligula. Donec finibus nibh sed leo dapibus
-          imperdiet. Fusce cursus eu mi sed porttitor. Aliquam eget suscipit
-          dolor, ac mollis risus. Vestibulum commodo turpis nulla, bibendum
-          varius urna dictum porta.
-        </p>
-      </div>
-      <div class="row w-100">
-        <h5>Query Dating Site</h5>
-      </div>
-      <div class="row w-100">
-        <p class="text-justify">
-          Fusce egestas lectus ac est porttitor congue. Mauris lacinia pharetra
-          odio ut egestas. Nullam facilisis condimentum consequat. Integer arcu
-          nibh, ullamcorper non fringilla quis, tempus sit amet turpis. Proin ac
-          gravida mi. Ut eros quam, pharetra venenatis pharetra at, porttitor
-          sit amet dolor. Ut et accumsan metus. Phasellus eros diam, tristique a
-          maximus vel, fringilla eu nisl. Pellentesque sed quam non urna dapibus
-          porta in in nibh. Phasellus lobortis nibh est, id pretium orci
-          efficitur at.
-        </p>
-      </div>
+    </div>
+
       <div class="row mt-3 next">
         <a href="#courses" class="col"
           ><iconify-icon
@@ -348,7 +306,7 @@
         </h5>
       </div>
       <div class="row my-4 contact-wrapper gap-3">
-        <a href="mailto:johndoe@gmail.com" class="col text-black">
+        <a href="mailto:tuo53004@templ.edu" class="col text-black">
           <iconify-icon
             icon="logos:google-gmail"
             width="60"
@@ -358,7 +316,7 @@
             title="Email"
           ></iconify-icon>
         </a>
-        <a href="https://www.linkedin.com/in/johndoe/" class="col"
+        <a href="https://www.linkedin.com/in/choiyon-chakraborty/" class="col"
           ><iconify-icon
             icon="skill-icons:linkedin"
             width="60"
@@ -368,7 +326,7 @@
             title="LinkedIn"
           ></iconify-icon>
         </a>
-        <a href="https://github.com/johndoe" class="col"
+        <a href="https://github.com/cchoiyon" class="col"
           ><iconify-icon
             icon="skill-icons:github-dark"
             width="60"
